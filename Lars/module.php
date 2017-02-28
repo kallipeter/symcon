@@ -1,6 +1,6 @@
 <?
 // Klassendefinition
-class EnOcean_Konfigurator extends IPSModule {
+class Lars extends IPSModule {
 	public function Create() {
 		// Diese Zeile nicht löschen.
 		parent::Create();
