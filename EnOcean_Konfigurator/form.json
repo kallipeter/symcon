@@ -11,7 +11,7 @@
   ],
   "actions":
   [
-		{ "type": "Button", "label": "Anlegen", "onClick": "HM_WriteValueBoolean($id, \"STATE\", true);" }
+		{ "type": "Button", "label": "Anlegen", "onClick": "CreateModules();" }
   ],
   "status":
   [
