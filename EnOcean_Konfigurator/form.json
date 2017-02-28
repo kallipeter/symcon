@@ -1,10 +1,18 @@
 {
-	"elements": [
-		{ "name": "Host", "type": "ValidationTextBox", "caption": "Host" }
-	],
-	"actions": [
-		{ "type": "Button", "label": "Get Group List", "onClick": "WHDDAM_GetGroupList($id);" },
-		{ "type": "Button", "label": "Get Source List", "onClick": "WHDDAM_GetSourceList($id);" },
-		{ "type": "Button", "label": "Reset Message Buffer", "onClick": "WHDDAM_ResetMessageBuffer($id);" }
-	]
+  "elements":
+  [
+	{ "type": "CheckBox", "name": "CreateShutter", "caption": "Create Shutter" },
+	{ "type": "Label", "name": "shutter1234", "caption": "shutter1234" },
+	{ "type": "CheckBox", "name": "Active", "caption": "Active" },
+	{ "type": "ValidationTextBox", "name": "Floor", "caption": "Floor" },
+	{ "type": "ValidationTextBox", "name": "Roomname", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location", "caption": "Location" }
+
+  ],
+  "status":
+  [
+	{ "code": 101, "icon": "active", "caption": "Instance getting created!" },
+	{ "code": 102, "icon": "active", "caption": "Instance is active!" },
+	{ "code": 104, "icon": "inactive", "caption": "Instance is inactive!" }
+  ]
 }
