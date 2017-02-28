@@ -1,7 +1,7 @@
 {
 	"id" : "{A4D67E9E-0801-4D71-831F-CBDDDAEC713F}",
 	"name" : "EnOcean_Konfigurator",
-	"type" : 2,
+	"type" : 4,
 	"vendor" : "Lars",
 	"aliases" : ["EnOcean-Konfigurator"],
 	"parentRequirements" : ["{79827379-F36E-4ADA-8A95-5F8D1DC92FA9}"],
