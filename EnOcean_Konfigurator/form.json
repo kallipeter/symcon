@@ -11,7 +11,7 @@
   ],
   "actions":
   [
-		{ "type": "Button", "label": "Anlegen", "onClick": "CreateModules();" }
+		{ "type": "Button", "label": "Anlegen", "onClick": "Test_CreateModules();" }
   ],
   "status":
   [
