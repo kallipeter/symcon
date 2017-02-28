@@ -12,7 +12,9 @@ class EnOcean_Konfigurator extends IPSModule {
 	public function ApplyChanges() {
 		// Diese Zeile nicht löschen
 		parent::ApplyChanges();
-				// Anlegen einer neuen Kategorie mit dem namen "EnOcean"
+	}
+	public function CreateModules() {
+		// Anlegen einer neuen Kategorie mit dem namen "EnOcean"
 		$CatEnOceanID = IPS_CreateCategory();       // Kategorie anlegen
 		IPS_SetName($CatEnOceanID, "DEMO_EnOcean"); // Kategorie benennen
 		IPS_SetParent($CatEnOceanID, 0); // Kategorie einsortieren unter dem Objekt mit der ID "0"
@@ -27,8 +29,7 @@ class EnOcean_Konfigurator extends IPSModule {
 		IPS_SetParent($InsShutterID, $CatShutterID);
 
 		IPS_SetConfiguration($InsShutterID, '{"DeviceID":40,"ReturnID":"FFCAD6B2","ButtonMode":1,"EmulateStatus":false}');
-		IPS_ApplyChanges($InsShutterID); //Neue Konfiguration übernehmen
-    #######################
+		IPS_ApplyChanges($InsShutterID);
 	}
 	
  }
