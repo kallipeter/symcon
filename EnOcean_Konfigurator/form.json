@@ -15,4 +15,8 @@
 	{ "code": 102, "icon": "active", "caption": "Instance is active!" },
 	{ "code": 104, "icon": "inactive", "caption": "Instance is inactive!" }
   ]
+	"actions":
+  [
+		{ "type": "Button", "label": "Anlegen", "onClick": "HM_WriteValueBoolean($id, \"STATE\", true);" }
+  ]
 }
