@@ -1,0 +1,10 @@
+{
+	"id" : "{7A6375C9-F464-4CE2-9E47-07F7CDD5E0FA}",
+	"name" : "EnOcean_Konfigurator",
+	"type" : 2,
+	"vendor" : "Lars_Schroeder",
+	"aliases" : ["EnOcean-Konfigurator"],
+	"parentRequirements" : [],
+	"childRequirements" : [],
+	"implemented" : []
+}
