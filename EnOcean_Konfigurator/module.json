@@ -4,7 +4,6 @@
 	"type" : 2,
 	"vendor" : "Lars",
 	"aliases" : ["EnOcean-Konfigurator"],
-	"parentRequirements" : [],
-	"childRequirements" : [],
-	"implemented" : []
+	"parentRequirements" : ["{4D657448-BB95-4BE0-97EF-88F2ADEDA4EC}"],
+	"childRequirements" : ["{611B0C0C-EE46-4943-885F-F4BF5EF0EB34}"],
 }
