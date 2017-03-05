@@ -1,12 +1,17 @@
 <?
 // Klassendefinition
 class EnOcean_Konfigurator extends IPSModule {
-	public function Create() {
-		// Diese Zeile nicht löschen.
+	public function Create()
+	{
+		//Never delete this line!
 		parent::Create();
-
-		//$config = IPS_GetConfiguration($InsID);
-		//echo $config;
+		
+		$this->RegisterPropertyString("Eltako_FAM_ID", "000000");
+		$this->RegisterPropertyString("Shutter_StartID", 40);
+		$this->RegisterPropertyString("Floor", "EG");
+		$this->RegisterPropertyString("Roomname", "Küche");
+		$this->RegisterPropertyString("Location", "links");
+	}
 }
 	// Überschreibt die intere IPS_ApplyChanges($id) Funktion
 	public function ApplyChanges() {
