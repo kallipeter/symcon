@@ -45,9 +45,9 @@ class EnOcean_Konfigurator extends IPSModule {
 		//$Shutter_StartID = 40;
 		//$Eltako_FAM_ID ="FFAA12";
 		$control_ID = hexdec($Eltako_FAM_ID);
-		//$ReturnID = $control_ID+$Shutter_StartID;
+		$ReturnID = $control_ID+$Shutter_StartID;
 		$control_ID = dechex($control_ID);
-		IPS_SetConfiguration($InsShutterID, '{"DeviceID":40,"ReturnID":"'.$control_ID.'","ButtonMode":1,"EmulateStatus":false}');
+		IPS_SetConfiguration($InsShutterID, '{"DeviceID":'.$Shutter_StartID.',"ReturnID":"'.$control_ID.'","ButtonMode":1,"EmulateStatus":false}');
 		IPS_ApplyChanges($InsShutterID);
 	}
 	
