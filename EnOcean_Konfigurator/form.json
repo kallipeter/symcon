@@ -7,9 +7,9 @@
 	{ "type": "ValidationTextBox", "name": "Shutter_StartID", "caption": "Shutter Start-ID" },
 	{ "type": "Label", "label": "### [Server] TCM310 Adresse: " },
 	{ "type": "CheckBox", "name": "create_1", "caption": "Bauteilanlegen" },
-	{ "type": "ValidationTextBox", "name": "Floor_1", "caption": "Floor" },
-	{ "type": "ValidationTextBox", "name": "Roomname_1", "caption": "Roomname" },
-	{ "type": "ValidationTextBox", "name": "Location_1", "caption": "Location" }
+	{ "type": "ValidationTextBox", "name": "Floor", "caption": "Floor" },
+	{ "type": "ValidationTextBox", "name": "Roomname", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location", "caption": "Location" }
 
   ],
   "actions":
