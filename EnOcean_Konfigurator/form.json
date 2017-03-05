@@ -1,7 +1,9 @@
 {
   "elements":
   [
-	{ "type": "CheckBox", "name": "CreateShutter", "caption": "Create Shutter" },
+	{ "type": "Label", "name": "Label_1", "caption": "### Erste ID des Bereichs Beschattung (Beispiel: 40)" },
+	{ "type": "ValidationTextBox", "name": "Shutter_StartID", "caption": "Shutter Start-ID" },
+	{ "type": "Label", "name": "Label_2", "caption": "### TCM310 Adresse".$EnOcean_TCM310_Value },
 	{ "type": "Label", "name": "shutter1234", "caption": "shutter1234" },
 	{ "type": "CheckBox", "name": "Active", "caption": "Active" },
 	{ "type": "ValidationTextBox", "name": "Floor", "caption": "Floor" },
@@ -15,8 +17,6 @@
   ],
   "status":
   [
-	{ "code": 101, "icon": "active", "caption": "Instance getting created!" },
-	{ "code": 102, "icon": "active", "caption": "Instance is active!" },
-	{ "code": 104, "icon": "inactive", "caption": "Instance is inactive!" }
+	{ "code": 101, "icon": "active", "caption": "Instance getting created!" }
   ]
 }
