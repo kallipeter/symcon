@@ -20,6 +20,7 @@ class EnOcean_Konfigurator extends IPSModule {
 		parent::ApplyChanges();
 	}
 	public function CreateModules() {
+		// IPS_ObjectExists(34881)
 		// Anlegen einer neuen Kategorie mit dem namen "EnOcean"
 		$CatEnOceanID = IPS_CreateCategory();       // Kategorie anlegen
 		IPS_SetName($CatEnOceanID, "EnOcean"); // Kategorie benennen
