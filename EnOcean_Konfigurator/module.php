@@ -29,6 +29,7 @@ class EnOcean_Konfigurator extends IPSModule {
 		
 		$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
 		$Roomname = $this->ReadPropertyString("Roomname");
+		echo $Roomname;
 		IPS_SetName($InsShutterID, "Küche"); // Instanz benennen
 		IPS_SetInfo($InsShutterID, "Test");
 		IPS_SetPosition($InsShutterID, 1);
