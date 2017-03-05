@@ -12,7 +12,7 @@ class EnOcean_Konfigurator extends IPSModule {
 		$this->RegisterPropertyString("Roomname", "Küche");
 		$this->RegisterPropertyString("Location", "links");
 	}
-}
+
 	// Überschreibt die intere IPS_ApplyChanges($id) Funktion
 	public function ApplyChanges() {
 		// Diese Zeile nicht löschen
