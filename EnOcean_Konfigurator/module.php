@@ -28,15 +28,18 @@ class EnOcean_Konfigurator extends IPSModule {
 		IPS_SetParent($CatShutterID, $CatEnOceanID); // Kategorie einsortieren unter dem Objekt "EnOcean"
 		
 		$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
+		$Eltako_FAM_ID = $this->ReadPropertyString("Eltako_FAM_ID");
+		$Shutter_StartID = $this->ReadPropertyInteger("Shutter_StartID");
+		$Floor = $this->ReadPropertyString("Floor");
 		$Roomname = $this->ReadPropertyString("Roomname");
-		echo $Roomname;
+		$Location = $this->ReadPropertyString("Location");
 		IPS_SetName($InsShutterID, $Roomname); // Instanz benennen
 		IPS_SetInfo($InsShutterID, "Test");
 		IPS_SetPosition($InsShutterID, 1);
 		IPS_SetParent($InsShutterID, $CatShutterID);
 		//$Roomname = $this->ReadPropertyString("Roomname");
 		//IPS_SetConfiguration($InsShutterID, '{"DeviceID":$this->ReadPropertyInteger("Shutter_StartID"),"ReturnID":$this->ReadPropertyString("Eltako_FAM_ID"),"ButtonMode":1,"EmulateStatus":false}');
-		IPS_SetConfiguration($InsShutterID, '{"DeviceID":40,"ReturnID":"FAFAFA","ButtonMode":1,"EmulateStatus":false}');
+		IPS_SetConfiguration($InsShutterID, '{"DeviceID":$Shutter_StartID,"ReturnID":$Eltako_FAM_ID,"ButtonMode":1,"EmulateStatus":false}');
 		IPS_ApplyChanges($InsShutterID);
 	}
 	
