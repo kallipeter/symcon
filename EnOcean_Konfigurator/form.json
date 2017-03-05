@@ -15,7 +15,7 @@
   ],
   "actions":
   [
-	{ "type": "Button", "label": "Anlegen", "onClick": "Eltako_CreateModules();" }
+	{ "type": "Button", "label": "Anlegen", "onClick": "Eltako_CreateModules($id);" }
   ],
   "status":
   [
