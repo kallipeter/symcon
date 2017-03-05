@@ -8,9 +8,9 @@ class EnOcean_Konfigurator extends IPSModule {
 		
 		$this->RegisterPropertyString("Eltako_FAM_ID", "000000");
 		$this->RegisterPropertyInteger("Shutter_StartID", 40);
-		$this->RegisterPropertyString("Floor", "EG");
-		$this->RegisterPropertyString("Roomname", "Küche");
-		$this->RegisterPropertyString("Location", "links");
+		$this->RegisterPropertyString("Floor_1", "EG");
+		$this->RegisterPropertyString("Roomname_1", "Küche");
+		$this->RegisterPropertyString("Location_1", "links");
 	}
 
 	// Überschreibt die intere IPS_ApplyChanges($id) Funktion
