@@ -23,12 +23,12 @@ class EnOcean_Konfigurator extends IPSModule {
 		IPS_SetParent($CatShutterID, $CatEnOceanID); // Kategorie einsortieren unter dem Objekt "EnOcean"
 		
 		$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
-		IPS_SetName($InsShutterID, $this->ReadPropertyBoolean("Roomname")); // Instanz benennen
+		IPS_SetName($InsShutterID, $this->ReadPropertyString("Roomname")); // Instanz benennen
 		IPS_SetInfo($InsShutterID, "Test");
 		IPS_SetPosition($InsShutterID, 1);
 		IPS_SetParent($InsShutterID, $CatShutterID);
 
-		IPS_SetConfiguration($InsShutterID, '{"DeviceID":$this->ReadPropertyBoolean("Shutter_StartID"),"ReturnID":$this->ReadPropertyBoolean("Eltako_FAM_ID"),"ButtonMode":1,"EmulateStatus":false}');
+		IPS_SetConfiguration($InsShutterID, '{"DeviceID":$this->ReadPropertyString("Shutter_StartID"),"ReturnID":$this->ReadPropertyBoolean("Eltako_FAM_ID"),"ButtonMode":1,"EmulateStatus":false}');
 		IPS_ApplyChanges($InsShutterID);
 	}
 	
