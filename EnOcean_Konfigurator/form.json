@@ -1,7 +1,7 @@
 {
   "elements":
   [
-	{ "type": "Label", "name": "Label_1", "caption": "### Erste ID des Bereichs Beschattung (Beispiel: 40)" },
+	{ "type": "Label", "label": "### Erste ID des Bereichs Beschattung (Beispiel: 40)" },
 	{ "type": "ValidationTextBox", "name": "Shutter_StartID", "caption": "Shutter Start-ID" },
 	{ "type": "Label", "name": "Label_2", "caption": "### TCM310 Adresse: " },
 	{ "type": "Label", "name": "shutter1234", "caption": "shutter1234" },
