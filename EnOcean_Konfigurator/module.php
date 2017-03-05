@@ -8,10 +8,10 @@ class EnOcean_Konfigurator extends IPSModule {
 		
 		$this->RegisterPropertyString("Eltako_FAM_ID", "000000");
 		$this->RegisterPropertyInteger("Shutter_StartID", 40);
-		$this->RegisterPropertyBoolean("create_1", true);
-		$this->RegisterPropertyString("Floor_1", "EG");
-		$this->RegisterPropertyString("Roomname_1", "Küche");
-		$this->RegisterPropertyString("Location_1", "links");
+		$this->RegisterPropertyBoolean("create", true);
+		$this->RegisterPropertyString("Floor", "EG");
+		$this->RegisterPropertyString("Roomname", "Küche");
+		$this->RegisterPropertyString("Location", "links");
 	}
 
 	// Überschreibt die intere IPS_ApplyChanges($id) Funktion
@@ -31,10 +31,10 @@ class EnOcean_Konfigurator extends IPSModule {
 		$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
 		$Eltako_FAM_ID = $this->ReadPropertyString("Eltako_FAM_ID");
 		$Shutter_StartID = $this->ReadPropertyInteger("Shutter_StartID");
-		$create = $this->ReadPropertyString("create_1");
-		$Floor = $this->ReadPropertyString("Floor_1");
-		$Roomname = $this->ReadPropertyString("Roomname_1");
-		$Location = $this->ReadPropertyString("Location_1");
+		$create = $this->ReadPropertyString("create");
+		$Floor = $this->ReadPropertyString("Floor");
+		$Roomname = $this->ReadPropertyString("Roomname");
+		$Location = $this->ReadPropertyString("Location");
 		//if ($create == true)
 		IPS_SetName($InsShutterID, $Roomname); // Instanz benennen
 		IPS_SetInfo($InsShutterID, "Test");
