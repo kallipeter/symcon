@@ -36,16 +36,14 @@ class EnOcean_Konfigurator extends IPSModule {
 		$Roomname = $this->ReadPropertyString("Roomname_1");
 		$Location = $this->ReadPropertyString("Location_1");
 		if ($create == true)
-		{
-			IPS_SetName($InsShutterID, $Roomname); // Instanz benennen
-			IPS_SetInfo($InsShutterID, "Test");
-			IPS_SetPosition($InsShutterID, 1);
-			IPS_SetParent($InsShutterID, $CatShutterID);
+		IPS_SetName($InsShutterID, $Roomname); // Instanz benennen
+		IPS_SetInfo($InsShutterID, "Test");
+		IPS_SetPosition($InsShutterID, 1);
+		IPS_SetParent($InsShutterID, $CatShutterID);
 			//$Roomname = $this->ReadPropertyString("Roomname");
 			//IPS_SetConfiguration($InsShutterID, '{"DeviceID":$this->ReadPropertyInteger("Shutter_StartID"),"ReturnID":$this->ReadPropertyString("Eltako_FAM_ID"),"ButtonMode":1,"EmulateStatus":false}');
-			IPS_SetConfiguration($InsShutterID, '{"DeviceID":'.$Shutter_StartID.',"ReturnID":'.$Eltako_FAM_ID.',"ButtonMode":1,"EmulateStatus":false}');
-			IPS_ApplyChanges($InsShutterID);
-		}
+		IPS_SetConfiguration($InsShutterID, '{"DeviceID":'.$Shutter_StartID.',"ReturnID":'.$Eltako_FAM_ID.',"ButtonMode":1,"EmulateStatus":false}');
+		IPS_ApplyChanges($InsShutterID);
 	}
 	
  }
