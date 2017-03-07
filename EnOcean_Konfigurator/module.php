@@ -27,8 +27,8 @@ class EnOcean_Konfigurator extends IPSModule {
 			IPS_SetParent($CatEnOceanID, 0); // Kategorie einsortieren unter dem Objekt mit der ID "0"
 		}
 		else {
-			$CatEnOceanID = @IPS_GetCategoryIDByName("Beschattung", $CatEnOceanID);
-			if ($CatEnOceanID === false) {
+			$CatShutterID = @IPS_GetCategoryIDByName("Beschattung", $CatEnOceanID);
+			if ($CatShutterID === false) {
 				$CatShutterID = IPS_CreateCategory();       // Kategorie anlegen
 				IPS_SetName($CatShutterID, "Beschattung"); // Kategorie benennen
 				IPS_SetParent($CatShutterID, $CatEnOceanID); // Kategorie einsortieren unter dem Objekt "EnOcean"
@@ -43,7 +43,7 @@ class EnOcean_Konfigurator extends IPSModule {
 		$Roomname = $this->ReadPropertyString("Roomname");
 		$Location = $this->ReadPropertyString("Location");
 		$Position = $Floor."/".$Roomname."/".$Location;
-		IPS_SetName($InsShutterID, $Roomname); // Instanz benennen
+		IPS_SetName($InsShutterID, $Position); // Instanz benennen
 		IPS_SetInfo($InsShutterID, "Test");
 		IPS_SetPosition($InsShutterID, 1);
 		IPS_SetParent($InsShutterID, $CatShutterID);
