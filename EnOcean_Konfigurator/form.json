@@ -6,7 +6,6 @@
 	{ "type": "Label", "label": "### [PCT14] Erste ID des Bereichs Beschattung (Beispiel: 40)" },
 	{ "type": "ValidationTextBox", "name": "Shutter_StartID", "caption": "Shutter Start-ID" },
 	{ "type": "Label", "label": "### [Server] TCM310 Adresse: " },
-	//{ "type": "CheckBox", "name": "create_1", "caption": "Bauteilanlegen" },
 	{ "type": "ValidationTextBox", "name": "Floor", "caption": "Floor" },
 	{ "type": "ValidationTextBox", "name": "Roomname", "caption": "Roomname" },
 	{ "type": "ValidationTextBox", "name": "Location", "caption": "Location" }
