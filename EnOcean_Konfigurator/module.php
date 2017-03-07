@@ -6,7 +6,7 @@ class EnOcean_Konfigurator extends IPSModule {
 		//Never delete this line!
 		parent::Create();
 		$lars = @IPS_GetVariableIDByName("EnOcean Gateway", 0);
-		$this->RegisterPropertyString("Eltako_FAM_ID", $lars);
+		$this->RegisterPropertyString("Eltako_FAM_ID", ".$lars.");
 		$this->RegisterPropertyInteger("Shutter_StartID", 40);
 		$this->RegisterPropertyBoolean("create", true);
 		$this->RegisterPropertyString("Floor", "EG");
