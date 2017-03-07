@@ -45,7 +45,7 @@ class EnOcean_Konfigurator extends IPSModule {
 		$Position = $Floor."/".$Roomname."/".$Location;
 		IPS_SetName($InsShutterID, $Position); // Instanz benennen
 		IPS_SetInfo($InsShutterID, "Test");
-		IPS_SetPosition($InsShutterID, 1);
+		IPS_SetPosition($InsShutterID, $Shutter_StartID);
 		IPS_SetParent($InsShutterID, $CatShutterID);
 			//$Roomname = $this->ReadPropertyString("Roomname");
 			//IPS_SetConfiguration($InsShutterID, '{"DeviceID":$this->ReadPropertyInteger("Shutter_StartID"),"ReturnID":$this->ReadPropertyString("Eltako_FAM_ID"),"ButtonMode":1,"EmulateStatus":false}');
