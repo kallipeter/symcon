@@ -7,9 +7,12 @@ class EnOcean_Konfigurator extends IPSModule {
 		parent::Create();
 		$this->RegisterPropertyString("Eltako_FAM_ID", "FF1234");
 		$this->RegisterPropertyInteger("Shutter_StartID", 40);
-		$this->RegisterPropertyString("Floor", "EG");
-		$this->RegisterPropertyString("Roomname", "Küche");
-		$this->RegisterPropertyString("Location", "links");
+		$this->RegisterPropertyString("Floor_1", "EG");
+		$this->RegisterPropertyString("Roomname_1", "Küche");
+		$this->RegisterPropertyString("Location_1", "links");
+		$this->RegisterPropertyString("Floor_2", "OG");
+		$this->RegisterPropertyString("Roomname_2", "Wohnzimmer");
+		$this->RegisterPropertyString("Location_2", "rechts");
 	}
 
 	// Überschreibt die intere IPS_ApplyChanges($id) Funktion
@@ -31,28 +34,51 @@ class EnOcean_Konfigurator extends IPSModule {
 			IPS_SetParent($CatShutterID, $CatEnOceanID); // Kategorie einsortieren unter dem Objekt "EnOcean"
 		}
 		
-		$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
+		// Gloabale Werte
 		$Eltako_FAM_ID = $this->ReadPropertyString("Eltako_FAM_ID");
 		$Shutter_StartID = $this->ReadPropertyInteger("Shutter_StartID");
+		
+		// Jalousie Nr.1
+		// Nummer anpassen
+		$JalNumber = 1;
+		// Nichts mehr anpassen
+		$DeviceID = $Shutter_StartID+$JalNumber-1;
+		$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
 		$create = $this->ReadPropertyString("create");
-		$Floor = $this->ReadPropertyString("Floor");
-		$Roomname = $this->ReadPropertyString("Roomname");
-		$Location = $this->ReadPropertyString("Location");
+		$Floor = $this->ReadPropertyString("Floor_1");
+		$Roomname = $this->ReadPropertyString("Roomname_1");
+		$Location = $this->ReadPropertyString("Location_1");
 		$Position = $Floor."/".$Roomname."/".$Location;
 		IPS_SetName($InsShutterID, $Position); // Instanz benennen
 		IPS_SetInfo($InsShutterID, "Test");
-		IPS_SetPosition($InsShutterID, $Shutter_StartID);
+		IPS_SetPosition($InsShutterID, $DeviceID);
 		IPS_SetParent($InsShutterID, $CatShutterID);
-			//$Roomname = $this->ReadPropertyString("Roomname");
-			//IPS_SetConfiguration($InsShutterID, '{"DeviceID":$this->ReadPropertyInteger("Shutter_StartID"),"ReturnID":$this->ReadPropertyString("Eltako_FAM_ID"),"ButtonMode":1,"EmulateStatus":false}');
-		//$Shutter_StartID = 40;
-		//$Eltako_FAM_ID ="FFAA12";
 		$control_ID = hexdec($Eltako_FAM_ID);
-		$control_ID = $control_ID+$Shutter_StartID;
+		$control_ID = $control_ID+$Shutter_StartID+$JalNumber-1;
 		$ReturnID = dechex($control_ID);
-		IPS_SetConfiguration($InsShutterID, '{"DeviceID":'.$Shutter_StartID.',"ReturnID":"'.$ReturnID.'","ButtonMode":1,"EmulateStatus":false}');
+		IPS_SetConfiguration($InsShutterID, '{"DeviceID":'.$DeviceID.',"ReturnID":"'.$ReturnID.'","ButtonMode":1,"EmulateStatus":false}');
 		IPS_ApplyChanges($InsShutterID);
-		$this->RegisterPropertyInteger("Shutter_StartID", $Shutter_StartID+1);
+		// Jalousie Nr.2
+		// Nummer anpassen
+		$JalNumber = 2;
+		// Nichts mehr anpassen
+		$DeviceID = $Shutter_StartID+$JalNumber-1;
+		$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
+		$create = $this->ReadPropertyString("create");
+		$Floor = $this->ReadPropertyString("Floor_2");
+		$Roomname = $this->ReadPropertyString("Roomname_2");
+		$Location = $this->ReadPropertyString("Location_2");
+		$Position = $Floor."/".$Roomname."/".$Location;
+		IPS_SetName($InsShutterID, $Position); // Instanz benennen
+		IPS_SetInfo($InsShutterID, "Test");
+		IPS_SetPosition($InsShutterID, $DeviceID);
+		IPS_SetParent($InsShutterID, $CatShutterID);
+		$control_ID = hexdec($Eltako_FAM_ID);
+		$control_ID = $control_ID+$Shutter_StartID+$JalNumber-1;
+		$ReturnID = dechex($control_ID);
+		IPS_SetConfiguration($InsShutterID, '{"DeviceID":'.$DeviceID.',"ReturnID":"'.$ReturnID.'","ButtonMode":1,"EmulateStatus":false}');
+		IPS_ApplyChanges($InsShutterID);
+		
 	}
 	
  }
