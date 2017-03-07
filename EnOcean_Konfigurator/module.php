@@ -45,9 +45,9 @@ class EnOcean_Konfigurator extends IPSModule {
 		$DeviceID = $Shutter_StartID+$JalNumber-1;
 		$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
 		$create = $this->ReadPropertyString("create");
-		$Floor = $this->ReadPropertyString("Floor_1");
-		$Roomname = $this->ReadPropertyString("Roomname_1");
-		$Location = $this->ReadPropertyString("Location_1");
+		$Floor = $this->ReadPropertyString("Floor_".$JalNumber);
+		$Roomname = $this->ReadPropertyString("Roomname_".$JalNumber);
+		$Location = $this->ReadPropertyString("Location_".$JalNumber);
 		$Position = $Floor."/".$Roomname."/".$Location;
 		IPS_SetName($InsShutterID, $Position); // Instanz benennen
 		IPS_SetInfo($InsShutterID, "Test");
