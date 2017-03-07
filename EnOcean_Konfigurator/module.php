@@ -20,14 +20,20 @@ class EnOcean_Konfigurator extends IPSModule {
 		parent::ApplyChanges();
 	}
 	public function CreateModules() {
-		// IPS_ObjectExists(34881)
-		// Anlegen einer neuen Kategorie mit dem namen "EnOcean"
-		$CatEnOceanID = IPS_CreateCategory();       // Kategorie anlegen
-		IPS_SetName($CatEnOceanID, "EnOcean"); // Kategorie benennen
-		IPS_SetParent($CatEnOceanID, 0); // Kategorie einsortieren unter dem Objekt mit der ID "0"
-		$CatShutterID = IPS_CreateCategory();       // Kategorie anlegen
-		IPS_SetName($CatShutterID, "Beschattung"); // Kategorie benennen
-		IPS_SetParent($CatShutterID, $CatEnOceanID); // Kategorie einsortieren unter dem Objekt "EnOcean"
+		$CatEnOceanID = @IPS_GetCategoryIDByName("EnOcean", 0);
+		if ($CatEnOceanID === false) {
+			$CatEnOceanID = IPS_CreateCategory();       // Kategorie anlegen
+			IPS_SetName($CatEnOceanID, "EnOcean"); // Kategorie benennen
+			IPS_SetParent($CatEnOceanID, 0); // Kategorie einsortieren unter dem Objekt mit der ID "0"
+		}
+		else {
+			$CatEnOceanID = @IPS_GetCategoryIDByName("Beschattung", $CatEnOceanID);
+			if ($CatEnOceanID === false) {
+				$CatShutterID = IPS_CreateCategory();       // Kategorie anlegen
+				IPS_SetName($CatShutterID, "Beschattung"); // Kategorie benennen
+				IPS_SetParent($CatShutterID, $CatEnOceanID); // Kategorie einsortieren unter dem Objekt "EnOcean"
+			}
+		}
 		
 		$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
 		$Eltako_FAM_ID = $this->ReadPropertyString("Eltako_FAM_ID");
