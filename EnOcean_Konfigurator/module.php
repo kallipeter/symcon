@@ -36,7 +36,7 @@ class EnOcean_Konfigurator extends IPSModule {
 		$Floor = $this->ReadPropertyString("Floor");
 		$Roomname = $this->ReadPropertyString("Roomname");
 		$Location = $this->ReadPropertyString("Location");
-		//if ($create == true)
+		$Position = $Floor."/".$Roomname."/".$Location;
 		IPS_SetName($InsShutterID, $Roomname); // Instanz benennen
 		IPS_SetInfo($InsShutterID, "Test");
 		IPS_SetPosition($InsShutterID, 1);
