@@ -4,7 +4,7 @@
 	{ "type": "Label", "label": "### [Eltako] ID des FAM14" },
 	{ "type": "ValidationTextBox", "name": "Eltako_FAM_ID", "caption": "Eltako_FAM_ID" },
 	{ "type": "Label", "label": "### [PCT14] Erste ID des Bereichs Beschattung (Beispiel: 40)" },
-	{ "type": "ValidationTextBox", "name": "Shutter_StartID", "caption": "Shutter Start-ID" },
+	{ "type": "NumberSpinner", "name": "Shutter_StartID", "caption": "Shutter Start-ID" },
 	{ "type": "Label", "label": "### [Server] TCM310 Adresse: " },
 	{ "type": "ValidationTextBox", "name": "Floor", "caption": "Floor" },
 	{ "type": "ValidationTextBox", "name": "Roomname", "caption": "Roomname" },
