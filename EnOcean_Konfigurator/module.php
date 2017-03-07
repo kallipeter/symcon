@@ -26,13 +26,11 @@ class EnOcean_Konfigurator extends IPSModule {
 			IPS_SetName($CatEnOceanID, "EnOcean"); // Kategorie benennen
 			IPS_SetParent($CatEnOceanID, 0); // Kategorie einsortieren unter dem Objekt mit der ID "0"
 		}
-		else {
-			$CatShutterID = @IPS_GetCategoryIDByName("Beschattung", $CatEnOceanID);
-			if ($CatShutterID === false) {
-				$CatShutterID = IPS_CreateCategory();       // Kategorie anlegen
-				IPS_SetName($CatShutterID, "Beschattung"); // Kategorie benennen
-				IPS_SetParent($CatShutterID, $CatEnOceanID); // Kategorie einsortieren unter dem Objekt "EnOcean"
-			}
+		CatShutterID = @IPS_GetCategoryIDByName("Beschattung", $CatEnOceanID);
+		if ($CatShutterID === false) {
+			$CatShutterID = IPS_CreateCategory();       // Kategorie anlegen
+			IPS_SetName($CatShutterID, "Beschattung"); // Kategorie benennen
+			IPS_SetParent($CatShutterID, $CatEnOceanID); // Kategorie einsortieren unter dem Objekt "EnOcean"
 		}
 		
 		$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
