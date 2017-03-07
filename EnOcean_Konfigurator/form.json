@@ -19,7 +19,16 @@
 	{ "type": "ValidationTextBox", "name": "Roomname_1", "caption": "Roomname" },
 	{ "type": "ValidationTextBox", "name": "Location_1", "caption": "Location" },
 	{ "type": "Label", "label": "### Jalousie Nr.2: ###" },
-	{ "type": "ValidationTextBox", "name": "Floor_2", "caption": "Floor" },
+	{ "type": "Select", "name": "Floor_2", "caption": "Floor",
+	    "options": [
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
 	{ "type": "ValidationTextBox", "name": "Roomname_2", "caption": "Roomname" },
 	{ "type": "ValidationTextBox", "name": "Location_2", "caption": "Location" }
   ],
