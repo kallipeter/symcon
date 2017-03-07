@@ -54,6 +54,7 @@ class EnOcean_Konfigurator extends IPSModule {
 		$ReturnID = dechex($control_ID);
 		IPS_SetConfiguration($InsShutterID, '{"DeviceID":'.$Shutter_StartID.',"ReturnID":"'.$ReturnID.'","ButtonMode":1,"EmulateStatus":false}');
 		IPS_ApplyChanges($InsShutterID);
+		$this->RegisterPropertyInteger("Shutter_StartID", $Shutter_StartID+1);
 	}
 	
  }
