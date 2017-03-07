@@ -7,7 +7,6 @@ class EnOcean_Konfigurator extends IPSModule {
 		parent::Create();
 		$this->RegisterPropertyString("Eltako_FAM_ID", "FF1234");
 		$this->RegisterPropertyInteger("Shutter_StartID", 40);
-		$this->RegisterPropertyBoolean("create", true);
 		$this->RegisterPropertyString("Floor", "EG");
 		$this->RegisterPropertyString("Roomname", "Küche");
 		$this->RegisterPropertyString("Location", "links");
