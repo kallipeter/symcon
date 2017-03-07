@@ -15,8 +15,7 @@
 		{ "label": "Garage", "value": "Garage" },
 		{ "label": "Aussen", "value": "Aussen" }
 	    ]
-	}
-	{ "type": "ValidationTextBox", "name": "Floor_1", "caption": "Floor" },
+	},
 	{ "type": "ValidationTextBox", "name": "Roomname_1", "caption": "Roomname" },
 	{ "type": "ValidationTextBox", "name": "Location_1", "caption": "Location" },
 	{ "type": "Label", "label": "### Jalousie Nr.2: ###" },
