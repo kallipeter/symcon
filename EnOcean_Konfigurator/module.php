@@ -52,12 +52,12 @@ class EnOcean_Konfigurator extends IPSModule {
 		while ($JalNumber <= 21)
 		{
 			$DeviceID = $Shutter_StartID+$JalNumber-1;
-			$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
 			$Floor = $this->ReadPropertyString("Floor_".$JalNumber);
 			$Roomname = $this->ReadPropertyString("Roomname_".$JalNumber);
 			$Location = $this->ReadPropertyString("Location_".$JalNumber);
 			$Position = $Floor."/".$Roomname."/".$Location;
 			if ($Floor != "false") {
+				$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
 				IPS_SetName($InsShutterID, $Position); // Instanz benennen
 				IPS_SetInfo($InsShutterID, "Test");
 				IPS_SetPosition($InsShutterID, $DeviceID);
