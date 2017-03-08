@@ -48,7 +48,7 @@ class EnOcean_Konfigurator extends IPSModule {
 		$JalNumber = 1;
 		// Nichts mehr anpassen
 		//global $max_shutter;
-		echo = "create";
+		echo "create";
 		while ($JalNumber <= 21)
 		{
 			$DeviceID = $Shutter_StartID+$JalNumber-1;
