@@ -1,4 +1,5 @@
 <?
+$max_shutter = 20;
 // Klassendefinition
 class EnOcean_Konfigurator extends IPSModule {
 	public function Create()
@@ -7,12 +8,14 @@ class EnOcean_Konfigurator extends IPSModule {
 		parent::Create();
 		$this->RegisterPropertyString("Eltako_FAM_ID", "FF1234");
 		$this->RegisterPropertyInteger("Shutter_StartID", 40);
-		$this->RegisterPropertyString("Floor_1", "EG");
-		$this->RegisterPropertyString("Roomname_1", "Küche");
-		$this->RegisterPropertyString("Location_1", "links");
-		$this->RegisterPropertyString("Floor_2", "OG");
-		$this->RegisterPropertyString("Roomname_2", "Wohnzimmer");
-		$this->RegisterPropertyString("Location_2", "rechts");
+		$i = 1;
+		while ($i <= $max_shutter)
+		{
+			$this->RegisterPropertyString("Floor_1", "false");
+			$this->RegisterPropertyString("Roomname_1", "Küche");
+			$this->RegisterPropertyString("Location_1", "links");
+			$i = i$++;
+		}
 	}
 
 	// Überschreibt die intere IPS_ApplyChanges($id) Funktion
@@ -42,7 +45,7 @@ class EnOcean_Konfigurator extends IPSModule {
 		// Nummern anpassen
 		$JalNumber = 1;
 		// Nichts mehr anpassen
-		while ($JalNumber <= 2)
+		while ($JalNumber <= $max_shutter)
 		{
 			$DeviceID = $Shutter_StartID+$JalNumber-1;
 			$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
