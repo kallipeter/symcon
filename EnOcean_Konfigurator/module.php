@@ -64,11 +64,9 @@ class EnOcean_Konfigurator extends IPSModule {
 				$ReturnID = dechex($control_ID);
 				IPS_SetConfiguration($InsShutterID, '{"DeviceID":'.$DeviceID.',"ReturnID":"'.$ReturnID.'","ButtonMode":1,"EmulateStatus":false}');
 				IPS_ApplyChanges($InsShutterID);
-			    }
+			}
 			$JalNumber = $JalNumber+1;
 		}
-	
 	}
-	
  }
 ?>
