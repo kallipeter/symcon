@@ -49,15 +49,17 @@ class EnOcean_Konfigurator extends IPSModule {
 		$Roomname = $this->ReadPropertyString("Roomname_".$JalNumber);
 		$Location = $this->ReadPropertyString("Location_".$JalNumber);
 		$Position = $Floor."/".$Roomname."/".$Location;
-		IPS_SetName($InsShutterID, $Position); // Instanz benennen
-		IPS_SetInfo($InsShutterID, "Test");
-		IPS_SetPosition($InsShutterID, $DeviceID);
-		IPS_SetParent($InsShutterID, $CatShutterID);
-		$control_ID = hexdec($Eltako_FAM_ID);
-		$control_ID = $control_ID+$Shutter_StartID+$JalNumber-1;
-		$ReturnID = dechex($control_ID);
-		IPS_SetConfiguration($InsShutterID, '{"DeviceID":'.$DeviceID.',"ReturnID":"'.$ReturnID.'","ButtonMode":1,"EmulateStatus":false}');
-		IPS_ApplyChanges($InsShutterID);
+		if ($Floor != false) {
+			IPS_SetName($InsShutterID, $Position); // Instanz benennen
+			IPS_SetInfo($InsShutterID, "Test");
+			IPS_SetPosition($InsShutterID, $DeviceID);
+			IPS_SetParent($InsShutterID, $CatShutterID);
+			$control_ID = hexdec($Eltako_FAM_ID);
+			$control_ID = $control_ID+$Shutter_StartID+$JalNumber-1;
+			$ReturnID = dechex($control_ID);
+			IPS_SetConfiguration($InsShutterID, '{"DeviceID":'.$DeviceID.',"ReturnID":"'.$ReturnID.'","ButtonMode":1,"EmulateStatus":false}');
+			IPS_ApplyChanges($InsShutterID);
+		    }
 		// Jalousie Nr.2
 		// Nummer anpassen
 		$JalNumber = 2;
