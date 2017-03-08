@@ -22,6 +22,7 @@
 	{ "type": "Label", "label": "### Jalousie Nr.2: ###" },
 	{ "type": "Select", "name": "Floor_2", "caption": "Floor",
 	    "options": [
+		{ "label": "Not used", "value": "false" },
 		{ "label": "EG", "value": "EG" },
 		{ "label": "OG", "value": "OG" },
 		{ "label": "DG", "value": "DG" },
@@ -31,7 +32,273 @@
 	    ]
 	},
 	{ "type": "ValidationTextBox", "name": "Roomname_2", "caption": "Roomname" },
-	{ "type": "ValidationTextBox", "name": "Location_2", "caption": "Location" }
+	{ "type": "ValidationTextBox", "name": "Location_2", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.3: ###" },
+	{ "type": "Select", "name": "Floor_3", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_3", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_3", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.4: ###" },
+	{ "type": "Select", "name": "Floor_4", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_4", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_4", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.5: ###" },
+	{ "type": "Select", "name": "Floor_5", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_5", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_5", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.6: ###" },
+	{ "type": "Select", "name": "Floor_6", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_6", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_6", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.7: ###" },
+	{ "type": "Select", "name": "Floor_7", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_7", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_7", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.8: ###" },
+	{ "type": "Select", "name": "Floor_8", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_8", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_8", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.9: ###" },
+	{ "type": "Select", "name": "Floor_9", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_9", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_9", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.10: ###" },
+	{ "type": "Select", "name": "Floor_10", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_10", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_10", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.11: ###" },
+	{ "type": "Select", "name": "Floor_11", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_11", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_11", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.12: ###" },
+	{ "type": "Select", "name": "Floor_12", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_12", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_12", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.13: ###" },
+	{ "type": "Select", "name": "Floor_13", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_13", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_13", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.14: ###" },
+	{ "type": "Select", "name": "Floor_14", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_14", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_14", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.15: ###" },
+	{ "type": "Select", "name": "Floor_15", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_15", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_15", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.16: ###" },
+	{ "type": "Select", "name": "Floor_16", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_16", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_16", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.17: ###" },
+	{ "type": "Select", "name": "Floor_17", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_17", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_17", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.18: ###" },
+	{ "type": "Select", "name": "Floor_18", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_18", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_18", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.19: ###" },
+	{ "type": "Select", "name": "Floor_19", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_19", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_19", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.20: ###" },
+	{ "type": "Select", "name": "Floor_20", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_20", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_20", "caption": "Location" },
+	{ "type": "Label", "label": "### Jalousie Nr.21: ###" },
+	{ "type": "Select", "name": "Floor_21", "caption": "Floor",
+	    "options": [
+		{ "label": "Not used", "value": "false" },
+		{ "label": "EG", "value": "EG" },
+		{ "label": "OG", "value": "OG" },
+		{ "label": "DG", "value": "DG" },
+		{ "label": "Keller", "value": "Keller" },
+		{ "label": "Garage", "value": "Garage" },
+		{ "label": "Aussen", "value": "Aussen" }
+	    ]
+	},
+	{ "type": "ValidationTextBox", "name": "Roomname_21", "caption": "Roomname" },
+	{ "type": "ValidationTextBox", "name": "Location_21", "caption": "Location" }
   ],
   "actions":
   [
