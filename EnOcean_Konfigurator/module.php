@@ -1,5 +1,5 @@
 <?
-$max_shutter = 20;
+$max_shutter = 22;
 // Klassendefinition
 class EnOcean_Konfigurator extends IPSModule {
 	public function Create()
