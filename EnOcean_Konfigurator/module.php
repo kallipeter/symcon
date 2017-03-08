@@ -30,13 +30,25 @@ class EnOcean_Konfigurator extends IPSModule {
 		if ($CatEnOceanID === false) {
 			$CatEnOceanID = IPS_CreateCategory();       // Kategorie anlegen
 			IPS_SetName($CatEnOceanID, "EnOcean"); // Kategorie benennen
+			IPS_SetIcon($CatEnOceanID, "IPS");
 			IPS_SetParent($CatEnOceanID, 0); // Kategorie einsortieren unter dem Objekt mit der ID "0"
 		}
 		$CatShutterID = @IPS_GetCategoryIDByName("Beschattung", $CatEnOceanID);
 		if ($CatShutterID === false) {
 			$CatShutterID = IPS_CreateCategory();       // Kategorie anlegen
 			IPS_SetName($CatShutterID, "Beschattung"); // Kategorie benennen
+			IPS_SetIcon($CatShutterID, "Jalousie");
 			IPS_SetParent($CatShutterID, $CatEnOceanID); // Kategorie einsortieren unter dem Objekt "EnOcean"
+		}
+		
+		if (IPS_VariableProfileExists("FSB14"))
+		    echo "Profil existiert bereits!";
+		else {
+			IPS_CreateVariableProfile("FSB14", 1);
+			IPS_SetVariableProfileAssociation("FSB14", 0, "Öffnen", "HollowArrowUp", 0x31B404);
+			IPS_SetVariableProfileAssociation("FSB14", 2, "Stop", "Cross", 0xFFFFFF);
+			IPS_SetVariableProfileAssociation("FSB14", 4, "Schließen", "HollowArrowDown", 0xFE2E2E);
+			IPS_SetVariableProfileIcon("FSB14", "Jalousie");
 		}
 		
 		// Gloabale Werte
@@ -67,6 +79,8 @@ class EnOcean_Konfigurator extends IPSModule {
 				$ReturnID = dechex($control_ID);
 				IPS_SetConfiguration($InsShutterID, '{"DeviceID":'.$DeviceID.',"ReturnID":"'.$ReturnID.'","ButtonMode":1,"EmulateStatus":false}');
 				IPS_ApplyChanges($InsShutterID);
+				IPS_SetName((IPS_GetChildrenIDs($InsShutterID)[0]), "Funktion");
+				IPS_SetIcon((IPS_GetChildrenIDs($InsShutterID)[0]), "Shutter");
 			}
 			$JalNumber = $JalNumber+1;
 		}
