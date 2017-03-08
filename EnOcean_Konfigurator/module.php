@@ -81,6 +81,7 @@ class EnOcean_Konfigurator extends IPSModule {
 				IPS_ApplyChanges($InsShutterID);
 				IPS_SetName((IPS_GetChildrenIDs($InsShutterID)[0]), "Funktion");
 				IPS_SetIcon((IPS_GetChildrenIDs($InsShutterID)[0]), "Shutter");
+				IPS_SetVariableCustomProfile((IPS_GetChildrenIDs($InsShutterID)[0]), "FSB14");
 			}
 			$JalNumber = $JalNumber+1;
 		}
