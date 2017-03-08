@@ -8,6 +8,7 @@
 	{ "type": "Label", "label": "### Jalousie Nr.1: ###" },
 	{ "type": "Select", "name": "Floor_1", "caption": "Floor",
 	    "options": [
+		{ "label": "Not used", "value": "false" },
 		{ "label": "EG", "value": "EG" },
 		{ "label": "OG", "value": "OG" },
 		{ "label": "DG", "value": "DG" },
