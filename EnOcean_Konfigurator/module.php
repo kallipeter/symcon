@@ -5,11 +5,11 @@ class EnOcean_Konfigurator extends IPSModule {
 	public function Create()
 	{
 		//Never delete this line!
-		global $max_shutter;
 		parent::Create();
 		$this->RegisterPropertyString("Eltako_FAM_ID", "FF1234");
 		$this->RegisterPropertyInteger("Shutter_StartID", 40);
 		$i = 1;
+		global $max_shutter;
 		while ($i <= $max_shutter)
 		{
 			$this->RegisterPropertyString("Floor_1", "false");
