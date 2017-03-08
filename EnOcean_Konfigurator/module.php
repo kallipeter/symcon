@@ -42,7 +42,7 @@ class EnOcean_Konfigurator extends IPSModule {
 		// Nummern anpassen
 		$JalNumber = 1;
 		// Nichts mehr anpassen
-		while ($JalNumber <= 20)
+		while ($JalNumber <= 2)
 		{
 			$DeviceID = $Shutter_StartID+$JalNumber-1;
 			$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
