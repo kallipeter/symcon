@@ -1,5 +1,5 @@
 <?
-$max_shutter = 22;
+$max_shutter = 21;
 // Klassendefinition
 class EnOcean_Konfigurator extends IPSModule {
 	public function Create()
@@ -16,7 +16,7 @@ class EnOcean_Konfigurator extends IPSModule {
 			$this->RegisterPropertyString("Roomname_".$i, "Raumname");
 			$this->RegisterPropertyString("Location_".$i, "Position");
 			$i = $i+1;
-			echo $i;
+			//echo $i;
 		}
 	}
 
