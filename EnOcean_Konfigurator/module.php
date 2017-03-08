@@ -14,7 +14,7 @@ class EnOcean_Konfigurator extends IPSModule {
 			$this->RegisterPropertyString("Floor_1", "false");
 			$this->RegisterPropertyString("Roomname_1", "Küche");
 			$this->RegisterPropertyString("Location_1", "links");
-			$i = i$++;
+			$i = $i++;
 		}
 	}
 
