@@ -9,13 +9,13 @@ class EnOcean_Konfigurator extends IPSModule {
 		$this->RegisterPropertyInteger("Shutter_StartID", 40);
 		$i = 1;
 		//$max_shutter = 20;
-		//while ($i <= 20)
-		//{
+		while ($i <= 20)
+		{
 			$this->RegisterPropertyString("Floor_".$i, "false");
 			$this->RegisterPropertyString("Roomname_".$i, "Küche");
 			$this->RegisterPropertyString("Location_".$i, "links");
-		//	$i = $i++;
-		//}
+			$i = $i+1;
+		}
 	}
 
 	// Überschreibt die intere IPS_ApplyChanges($id) Funktion
