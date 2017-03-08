@@ -1,4 +1,5 @@
 <?
+$max_shutter = 20;
 // Klassendefinition
 class EnOcean_Konfigurator extends IPSModule {
 	public function Create()
@@ -8,7 +9,7 @@ class EnOcean_Konfigurator extends IPSModule {
 		$this->RegisterPropertyString("Eltako_FAM_ID", "FF1234");
 		$this->RegisterPropertyInteger("Shutter_StartID", 40);
 		$i = 1;
-		$max_shutter = 20;
+		global $max_shutter;
 		while ($i <= $max_shutter)
 		{
 			$this->RegisterPropertyString("Floor_".$i, "false");
