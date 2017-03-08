@@ -8,8 +8,8 @@ class EnOcean_Konfigurator extends IPSModule {
 		$this->RegisterPropertyString("Eltako_FAM_ID", "FF1234");
 		$this->RegisterPropertyInteger("Shutter_StartID", 40);
 		$i = 1;
-		$max_shutter = 20;
-		while ($i <= $max_shutter)
+		//$max_shutter = 20;
+		while ($i <= 20)
 		{
 			$this->RegisterPropertyString("Floor_1", "false");
 			$this->RegisterPropertyString("Roomname_1", "Küche");
@@ -45,8 +45,8 @@ class EnOcean_Konfigurator extends IPSModule {
 		// Nummern anpassen
 		$JalNumber = 1;
 		// Nichts mehr anpassen
-		$max_shutter = 20;
-		while ($JalNumber <= $max_shutter)
+		//$max_shutter = 20;
+		while ($JalNumber <= 20)
 		{
 			$DeviceID = $Shutter_StartID+$JalNumber-1;
 			$InsShutterID = IPS_CreateInstance("{1463CAE7-C7D5-4623-8539-DD7ADA6E92A9}");
